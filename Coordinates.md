@@ -10,6 +10,7 @@
 
 # Biomes
 - Lush biome: 34 -1 252
+- Bamboo Jungle: -1200 -4200
 
 # Nether
 - Fortress: 350 -200
