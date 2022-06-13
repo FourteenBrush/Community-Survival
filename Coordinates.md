@@ -10,3 +10,6 @@
 
 # Biomes
 - Lush biome: 34 -1 252
+
+# Nether
+- Fortress: 350 -200
