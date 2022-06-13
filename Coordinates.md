@@ -12,7 +12,7 @@
 - Lush biome: 34 -1 252
 - Bamboo Jungle: -1200 -4200
 - Jungle: -650 -1400
-- Snowy Plains: -2919 -5932
+- Snowy Plains: -2919 -5932 (but only 50x50 blocks lmao RIP)
 
 # Nether
 - Fortress: 350 -200
