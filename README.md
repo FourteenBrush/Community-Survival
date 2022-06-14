@@ -13,3 +13,5 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 |-----------------------|-----------------------------------------------------------------------------------|
 | /tps                  | Show TPS                                                                          |
 | /chatcolor &lt;color> | Sets your chat color. You can use normal color codes (0-9 and a-f) or hex colors. |
+| /unload | Unload your inventory into your storage chests |
+| /sort | Adjust your ChestSort settings |
