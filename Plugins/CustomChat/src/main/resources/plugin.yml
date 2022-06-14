@@ -1,0 +1,10 @@
+name: CustomChat
+main: com.jeff_media.customchat.CustomChat
+version: ${project.version}
+api-version: 1.16
+author: mfnalex
+description: Chat formatting & per-player chat colors
+commands:
+  chatcolor:
+    usage: /<command> <color>
+    description: Sets your chat color

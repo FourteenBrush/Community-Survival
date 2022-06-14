@@ -9,4 +9,7 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 - All kinds of potions are stackable up to 16 (default 1)
 
 ## Available commands (besides vanilla)
-- /tps
+| Command               | Description                                                                       |
+|-----------------------|-----------------------------------------------------------------------------------|
+| /tps                  | Show TPS                                                                          |
+| /chatcolor &lt;color> | Sets your chat color. You can use normal color codes (0-9 and a-f) or hex colors. |
