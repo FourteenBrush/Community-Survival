@@ -1,1 +1,1 @@
-format: "{color}%s&r &7&l» &r%s"
+format: "{name}&r &7&l» &r{message}"

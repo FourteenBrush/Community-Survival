@@ -6,5 +6,6 @@ author: mfnalex
 description: Chat formatting & per-player chat colors
 commands:
   chatcolor:
-    usage: /<command> <color>
+    usage: /<command> <color1> [color2]
     description: Sets your chat color
+    aliases: [color]
