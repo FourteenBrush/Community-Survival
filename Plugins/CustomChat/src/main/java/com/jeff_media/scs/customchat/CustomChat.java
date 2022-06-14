@@ -1,4 +1,4 @@
-package com.jeff_media.customchat;
+package com.jeff_media.scs.customchat;
 
 import net.kyori.adventure.platform.bukkit.BukkitAudiences;
 import net.kyori.adventure.platform.bukkit.BukkitComponentSerializer;

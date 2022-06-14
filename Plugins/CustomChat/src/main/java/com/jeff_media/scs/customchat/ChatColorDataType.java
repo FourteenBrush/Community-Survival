@@ -1,4 +1,4 @@
-package com.jeff_media.customchat;
+package com.jeff_media.scs.customchat;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.persistence.PersistentDataAdapterContext;

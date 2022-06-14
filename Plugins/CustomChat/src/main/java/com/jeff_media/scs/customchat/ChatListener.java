@@ -1,4 +1,4 @@
-package com.jeff_media.customchat;
+package com.jeff_media.scs.customchat;
 
 import org.bukkit.ChatColor;
 import org.bukkit.event.EventHandler;

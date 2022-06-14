@@ -1,5 +1,5 @@
 name: SCSCustomChat
-main: com.jeff_media.customchat.CustomChat
+main: com.jeff_media.scs.customchat.CustomChat
 version: ${project.version}
 api-version: 1.16
 author: mfnalex

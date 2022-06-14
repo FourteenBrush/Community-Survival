@@ -1,0 +1,6 @@
+name: SCSMentions
+main: com.jeff_media.scs.mentions.Mentions
+version: ${project.version}
+api-version: 1.16
+author: mfnalex
+description: Mention players using @
