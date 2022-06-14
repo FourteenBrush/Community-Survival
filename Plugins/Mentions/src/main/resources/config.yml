@@ -1,2 +1,9 @@
-message: "&4&l{name}&r &amentioned you!"
-message2: "&aYou mentioned &4&l{name}&r&a!"
+message: "&6&l{name}&r &amentioned you!"
+notify-sender: false
+message-sender: "&aYou mentioned &6&l{name}&r&a!"
+enabled: "&6Mentions &aenabled"
+disabled: "&6Mentions &cdisabled"
+
+sound: "minecraft:block.note_block.chime"
+volume: 1.0
+pitch: 1.0
