@@ -7,3 +7,7 @@ disabled: "&6Mentions &cdisabled"
 sound: "minecraft:block.note_block.chime"
 volume: 1.0
 pitch: 1.0
+
+commands:
+  asd:
+    aliases: asd

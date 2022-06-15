@@ -7,6 +7,8 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 - randomTickSpeed is set to 5 (default 1)
 - payerSleepPercentage is set to 1 (default 100)
 - All kinds of potions are stackable up to 16 (default 1)
+- view and simulation distance is set to 20 (default 10, I think)
+- entity-tracking-range is set to 256 for players, 128 for the rest
 
 ## Available commands (besides vanilla)
 | Command               | Description                                                                       |
@@ -21,4 +23,4 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 # SCSMentions
 - Highlight mentioned player's name in chat
 # SCSCustomChat
-- Join/Leave messages
+~~- Join/Leave messages~~

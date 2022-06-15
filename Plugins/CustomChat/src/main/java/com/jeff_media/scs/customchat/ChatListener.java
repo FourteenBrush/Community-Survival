@@ -5,6 +5,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.persistence.PersistentDataType;
 
 public class ChatListener implements Listener {
@@ -24,5 +25,11 @@ public class ChatListener implements Listener {
         if(event.getPlayer().getPersistentDataContainer().has(main.getChatColor2Key(), PersistentDataType.INTEGER)) {
             event.getPlayer().getPersistentDataContainer().remove(main.getChatColor2Key());
         }
+        event.setJoinMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("join").replace("{name}", main.getPrefix(event.getPlayer()))));
+    }
+
+    @EventHandler
+    public void onLeave(PlayerQuitEvent event) {
+        event.setQuitMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("leave").replace("{name}", main.getPrefix(event.getPlayer()))));
     }
 }
