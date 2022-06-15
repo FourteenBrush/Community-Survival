@@ -14,5 +14,8 @@
 - Jungle: -650 -1400
 - Snowy Plains: -2919 -5932 (but only 50x50 blocks lmao RIP)
 
+# Structures
+- Stronghold: 437 5 -1230
+
 # Nether
 - Fortress: 350 -200
