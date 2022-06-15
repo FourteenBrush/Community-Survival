@@ -20,3 +20,5 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 ## Todo
 # SCSMentions
 - Highlight mentioned player's name in chat
+# SCSCustomChat
+- Join/Leave messages
