@@ -1,3 +1,13 @@
 format: "{name}&r &7&l» &r{message}"
 join: "&7[&a+&7] &r{name} &7joined this weird server."
 leave: "&7[&c-&7] &r{name} &7left this weird server."
+
+# Mentions
+message: "&6&l{name}&r &amentioned you!"
+notify-sender: false
+message-sender: "&aYou mentioned &6&l{name}&r&a!"
+enabled: "&6Mentions &aenabled"
+disabled: "&6Mentions &cdisabled"
+sound: "minecraft:block.note_block.chime"
+volume: 1.0
+pitch: 1.0

@@ -9,3 +9,5 @@ commands:
     usage: /<command> <color1> [color2]
     description: Sets your chat color
     aliases: [color]
+  mentions:
+    description: Toggles notifications for mentions

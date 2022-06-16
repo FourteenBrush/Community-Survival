@@ -6,7 +6,10 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.kyori.adventure.text.serializer.legacy.LegacyComponentSerializer;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.ChatMessageType;
+import net.md_5.bungee.api.chat.TextComponent;
 import org.bukkit.NamespacedKey;
+import org.bukkit.SoundCategory;
 import org.bukkit.entity.Player;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -24,6 +27,7 @@ public class CustomChat extends JavaPlugin {
     private final NamespacedKey chatColor2Key = new NamespacedKey(this,"hex2");
     private BukkitAudiences adventure;
     private final Map<UUID,String> prefixes = new HashMap<>();
+    private final NamespacedKey disabledKey = new NamespacedKey(this,"mentions-disabled");
 
     {
         instance = this;
@@ -35,6 +39,10 @@ public class CustomChat extends JavaPlugin {
 
     public BukkitAudiences getAdventure() {
         return adventure;
+    }
+
+    public NamespacedKey getDisabledKey() {
+        return disabledKey;
     }
 
     public static String parseMiniMessage(String input) {
@@ -98,6 +106,7 @@ public class CustomChat extends JavaPlugin {
         saveDefaultConfig();
         getServer().getPluginManager().registerEvents(new ChatListener(),this);
         getCommand("chatcolor").setExecutor(new ChatColorCommand());
+        getCommand("mentions").setExecutor(new MentionsCommand());
         adventure = BukkitAudiences.create(this);
     }
 
@@ -108,5 +117,15 @@ public class CustomChat extends JavaPlugin {
 
     public Map<UUID, String> getPrefixes() {
         return prefixes;
+    }
+
+    public void mention(Player player, Player mentioned) {
+        if(getConfig().getBoolean("notify-sender")) {
+            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, net.md_5.bungee.api.chat.TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("message-sender").replace("{name}", mentioned.getName()))));
+        }
+        if(!mentioned.getPersistentDataContainer().has(disabledKey, PersistentDataType.BYTE)) {
+            mentioned.playSound(mentioned.getLocation(),getConfig().getString("sound"), SoundCategory.MASTER,(float) getConfig().getDouble("volume"),(float) getConfig().getDouble("pitch"));
+            mentioned.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("message").replace("{name}", player.getName()))));
+        }
     }
 }

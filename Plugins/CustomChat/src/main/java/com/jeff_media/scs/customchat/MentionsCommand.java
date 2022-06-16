@@ -1,4 +1,4 @@
-package com.jeff_media.scs.mentions;
+package com.jeff_media.scs.customchat;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -9,7 +9,7 @@ import org.bukkit.persistence.PersistentDataType;
 
 public class MentionsCommand implements CommandExecutor {
 
-    private static final Mentions main = Mentions.getInstance();
+    private static final CustomChat main = CustomChat.getInstance();
 
     @Override
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
@@ -29,4 +29,5 @@ public class MentionsCommand implements CommandExecutor {
         }
         return true;
     }
+
 }
