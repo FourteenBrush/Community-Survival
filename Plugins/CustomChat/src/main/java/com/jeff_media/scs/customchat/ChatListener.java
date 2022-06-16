@@ -17,7 +17,7 @@ public class ChatListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onChat(AsyncPlayerChatEvent event) {
-        event.setFormat(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("format").replace("{name}", main.getPrefix(event.getPlayer())).replace("{message}", event.getMessage().replace("%","%%"))));
+        event.setFormat(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("format").replace("{name}", main.getPrefix(event.getPlayer(), false)).replace("{message}", event.getMessage().replace("%","%%"))));
     }
 
     @EventHandler
@@ -28,12 +28,12 @@ public class ChatListener implements Listener {
         if(event.getPlayer().getPersistentDataContainer().has(main.getChatColor2Key(), PersistentDataType.INTEGER)) {
             event.getPlayer().getPersistentDataContainer().remove(main.getChatColor2Key());
         }
-        event.setJoinMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("join").replace("{name}", main.getPrefix(event.getPlayer()))));
+        event.setJoinMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("join").replace("{name}", main.getPrefix(event.getPlayer(), false))));
     }
 
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
-        event.setQuitMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("leave").replace("{name}", main.getPrefix(event.getPlayer()))));
+        event.setQuitMessage(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("leave").replace("{name}", main.getPrefix(event.getPlayer(), false))));
     }
 
     @EventHandler
@@ -50,7 +50,7 @@ public class ChatListener implements Listener {
             if(mentioned == null || mentioned.equals(event.getPlayer())) {
                 continue;
             }
-            split[i] = "@" + ChatColor.translateAlternateColorCodes('&',main.getPrefix(mentioned)) + ChatColor.RESET;
+            split[i] = "@" + ChatColor.translateAlternateColorCodes('&',main.getPrefix(mentioned, false)) + ChatColor.RESET;
             CustomChat.getInstance().mention(event.getPlayer(), mentioned);
         }
         event.setMessage(String.join(" ", split));

@@ -11,3 +11,6 @@ commands:
     aliases: [color]
   mentions:
     description: Toggles notifications for mentions
+  showitem:
+  showinv:
+  me:

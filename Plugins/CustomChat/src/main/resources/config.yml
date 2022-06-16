@@ -11,3 +11,15 @@ disabled: "&6Mentions &cdisabled"
 sound: "minecraft:block.note_block.chime"
 volume: 1.0
 pitch: 1.0
+
+# showitem
+showitem:
+  message: "&7&o* {name}&r&7&o is showing off their {item}&r&7&o. Hover here to see it."
+  no-item: "&cYou do not have any item in your hand."
+
+showinv:
+  message: "&7&o* {name}&r&7&o is showing off their inventory. Click here to see it."
+  title: "{name}&r&8's inventory"
+
+me:
+  message: "&7&o* {name}&r&7&o {message}"

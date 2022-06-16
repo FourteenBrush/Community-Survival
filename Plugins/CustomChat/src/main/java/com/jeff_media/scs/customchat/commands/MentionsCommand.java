@@ -1,5 +1,6 @@
-package com.jeff_media.scs.customchat;
+package com.jeff_media.scs.customchat.commands;
 
+import com.jeff_media.scs.customchat.CustomChat;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

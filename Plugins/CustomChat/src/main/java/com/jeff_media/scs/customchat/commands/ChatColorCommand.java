@@ -1,5 +1,6 @@
-package com.jeff_media.scs.customchat;
+package com.jeff_media.scs.customchat.commands;
 
+import com.jeff_media.scs.customchat.CustomChat;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.command.Command;

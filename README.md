@@ -18,6 +18,9 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 | /unload | Unload your inventory into your storage chests |
 | /sort | Adjust your ChestSort settings |
 | /mentions | Toggles notifications for mentions |
+| /showitem | Shows your current item in chat |
+| /showinv | Shows your inventory in chat |
+| /me | |
 
 ## Todo
 # SCSMentions
