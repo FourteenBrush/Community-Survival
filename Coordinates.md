@@ -19,3 +19,6 @@
 
 # Nether
 - Fortress: 350 -200
+
+# Villagers
+- Olivio's villager: 6550 65 -8474

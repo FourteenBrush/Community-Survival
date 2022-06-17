@@ -17,7 +17,8 @@ public class ChatListener implements Listener {
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onChat(AsyncPlayerChatEvent event) {
-        event.setFormat(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("format").replace("{name}", main.getPrefix(event.getPlayer(), false)).replace("{message}", event.getMessage().replace("%","%%"))));
+        event.setFormat(ChatColor.translateAlternateColorCodes('&',main.getConfig().getString("format")
+                .replace("{name}", main.getPrefix(event.getPlayer(), false)).replace("{message}", event.getMessage().replace("%","%%"))));
     }
 
     @EventHandler

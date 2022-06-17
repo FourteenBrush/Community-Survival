@@ -23,10 +23,10 @@ public class MentionsCommand implements CommandExecutor {
 
         if(enabledNow) {
             player.getPersistentDataContainer().remove(main.getDisabledKey());
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("enabled")));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("mentions.enabled")));
         } else {
             player.getPersistentDataContainer().set(main.getDisabledKey(), PersistentDataType.BYTE, (byte) 1);
-            player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("disabled")));
+            player.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("mentions.disabled")));
         }
         return true;
     }

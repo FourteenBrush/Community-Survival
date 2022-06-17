@@ -131,12 +131,12 @@ public class CustomChat extends JavaPlugin {
     }
 
     public void mention(Player player, Player mentioned) {
-        if (getConfig().getBoolean("notify-sender")) {
-            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, net.md_5.bungee.api.chat.TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("message-sender").replace("{name}", mentioned.getName()))));
+        if (getConfig().getBoolean("mention.notify-sender")) {
+            player.spigot().sendMessage(ChatMessageType.ACTION_BAR, net.md_5.bungee.api.chat.TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("mention.message-sender").replace("{name}", mentioned.getName()))));
         }
         if (!mentioned.getPersistentDataContainer().has(disabledKey, PersistentDataType.BYTE)) {
-            mentioned.playSound(mentioned.getLocation(), getConfig().getString("sound"), SoundCategory.MASTER, (float) getConfig().getDouble("volume"), (float) getConfig().getDouble("pitch"));
-            mentioned.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("message").replace("{name}", player.getName()))));
+            mentioned.playSound(mentioned.getLocation(), getConfig().getString("mention.sound"), SoundCategory.MASTER, (float) getConfig().getDouble("mention.volume"), (float) getConfig().getDouble("mention.pitch"));
+            mentioned.spigot().sendMessage(ChatMessageType.ACTION_BAR, TextComponent.fromLegacyText(org.bukkit.ChatColor.translateAlternateColorCodes('&', getConfig().getString("mention.message").replace("{name}", player.getName()))));
         }
     }
 }

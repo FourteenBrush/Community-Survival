@@ -21,6 +21,7 @@ Feel free to suggest plugins in the issues. Only cosmetic plugins and **minor** 
 | /showitem | Shows your current item in chat |
 | /showinv | Shows your inventory in chat |
 | /me | |
+| /co i | Toggle CoreProtect inspection mode |
 
 ## Todo
 # SCSMentions
